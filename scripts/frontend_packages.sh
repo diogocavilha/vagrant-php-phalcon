@@ -9,6 +9,6 @@ if [ ! -e "/usr/bin/node" ]; then
     sudo ln -s "$(which nodejs)" /usr/bin/node
 fi
 
-if [ "" = $(bower -v) ]; then
+if [ ! -e "/usr/local/bin/bower" ]; then
     sudo npm install -g bower
 fi
