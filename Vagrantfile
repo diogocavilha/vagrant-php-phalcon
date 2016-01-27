@@ -5,7 +5,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-    config.vm.box = "provisiontest"
+    config.vm.box = "boxname"
     config.vm.synced_folder "/www", "/www"
     config.vm.synced_folder "./", "/temp"
     config.vm.network :private_network, ip: "192.168.0.10"
