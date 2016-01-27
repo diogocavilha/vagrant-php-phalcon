@@ -19,7 +19,7 @@ apt-get install -y php5-mongo
 apt-get install -y php5-gd
 apt-get install -y php5-mysql
 
-if [ ! -e "/etc/php5/mods-available/mcrypt.ini" ]; then
+if [ ! -e "/etc/php5/fpm/conf.d/mcrypt.ini" ]; then
     cd /etc/php5/fpm/conf.d && sudo ln -s ../../mods-available/mcrypt.ini
 fi
 
@@ -34,7 +34,6 @@ if [ ! -e "/usr/local/bin/composer" ]; then
     sudo cp -iv composer.phar /usr/local/bin/composer
     rm -f composer.phar
 fi
-
 sudo composer self-update
 
 echo "Configuring PHP FPM..."
