@@ -33,9 +33,9 @@ if [ ! -e "/usr/local/bin/composer" ]; then
     curl -sS https://getcomposer.org/installer | php
     sudo cp -iv composer.phar /usr/local/bin/composer
     rm -f composer.phar
-else
-    sudo composer self-update
 fi
+
+sudo composer self-update
 
 echo "Configuring PHP FPM..."
 
