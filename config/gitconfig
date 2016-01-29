@@ -1,0 +1,9 @@
+[user]
+    email = diogo@softers.com.br
+    name = Diogo Alexsander Cavilha
+[push]
+    default = simple
+[core]
+    editor = vim
+[diff]
+    tool = vim
