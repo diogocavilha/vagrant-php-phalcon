@@ -1,5 +1,3 @@
-### OS: Ubuntu 14.04
-
 # Installation
 ```sh
 $ cd /path/project
