@@ -8,9 +8,12 @@ apt-get install -y nginx
 
 echo "Importing Nginx configuration..."
 
-rm -rf /etc/nginx/sites-enabled/*.* > /dev/null
-rm -rf /etc/nginx/sites-available/*.* > /dev/null
-rm -rf /etc/nginx/conf.d/*.* > /dev/null
+sudo rm -rf /etc/nginx/sites-enabled/*.* > /dev/null
+sudo rm -rf /etc/nginx/sites-available/*.* > /dev/null
+sudo rm -rf /etc/nginx/sites-enabled/* > /dev/null
+sudo rm -rf /etc/nginx/sites-available/* > /dev/null
+sudo rm -rf /etc/nginx/conf.d/*.* > /dev/null
+sudo rm -rf /etc/nginx/conf.d/* > /dev/null
 
 sudo cp -ivf $CONFIG_PROVISION_PATH/nginx/serverblock_default.conf /etc/nginx/conf.d/default.conf
 chmod 644 /etc/nginx/conf.d/default.conf
