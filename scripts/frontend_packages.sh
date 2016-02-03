@@ -12,3 +12,5 @@ fi
 if [ ! -e "/usr/local/bin/bower" ]; then
     sudo npm install -g bower
 fi
+
+sudo npm install -g gulp
