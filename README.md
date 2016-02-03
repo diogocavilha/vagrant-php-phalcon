@@ -1,7 +1,7 @@
 # Installation
 ```sh
 $ cd /path/project
-$ git clone https://github.com/diogocavilha/vagrant-php-phalcon.git vagrant && rm -rf vagrant/.git
+$ git clone https://github.com/diogocavilha/vagrant-php-phalcon.git vagrant && rm -rf vagrant/.git && echo "vagrant/.vagrant" >> .gitignore
 $ cd vagrant
 $ vagrant up
 ```
