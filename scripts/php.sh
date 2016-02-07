@@ -25,8 +25,8 @@ fi
 
 echo "Enabling PHP errors..."
 
-sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/apache2/php.ini
-sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/apache2/php.ini
+sed -i "s/error_reporting = .*/error_reporting = E_ALL/" /etc/php5/fpm/php.ini
+sed -i "s/display_errors = .*/display_errors = On/" /etc/php5/fpm/php.ini
 
 if [ ! -e "/usr/local/bin/composer" ]; then
     echo "Installing Composer..."
