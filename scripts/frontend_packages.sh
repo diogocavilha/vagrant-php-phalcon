@@ -1,16 +1,14 @@
 #!/bin/bash
 
-echo "Installing node, npm and bower..."
-
+echo "Installing nodejs..."
 apt-get install -y nodejs
-apt-get install -y npm
+sudo ln -sf "$(which nodejs)" /usr/bin/node
 
-if [ ! -e "/usr/bin/node" ]; then
-    sudo ln -s "$(which nodejs)" /usr/bin/node
-fi
+echo "Installing npm..."
+apt-get install -y npm > /dev/null
 
-if [ ! -e "/usr/local/bin/bower" ]; then
-    sudo npm install -g bower
-fi
+echo "Installing bower..."
+sudo npm install -g bower > /dev/null
 
-sudo npm install -g gulp
+echo "Installing gulp..."
+sudo npm install -g gulp > /dev/null
