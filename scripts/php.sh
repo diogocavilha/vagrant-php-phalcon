@@ -38,4 +38,4 @@ sudo composer self-update
 
 echo "Configuring PHP FPM..."
 
-sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/' /etc/php5/fpm/pool.d/www.conf
+sed -i 's#listen = /var/run/php5-fpm.sock#listen = 127.0.0.1:9000#' /etc/php5/fpm/pool.d/www.conf
