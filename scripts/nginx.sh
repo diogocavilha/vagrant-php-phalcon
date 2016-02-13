@@ -16,4 +16,3 @@ sudo rm -rf /etc/nginx/conf.d/*.* > /dev/null
 sudo rm -rf /etc/nginx/conf.d/* > /dev/null
 
 sudo cp -iv $CONFIG_PROVISION_PATH/nginx/conf.d/* /etc/nginx/conf.d/
-sudo chmod 644 /etc/nginx/conf.d/default.conf
