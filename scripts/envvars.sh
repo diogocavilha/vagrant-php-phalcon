@@ -1,16 +1,13 @@
 #!/bin/bash
 
+echo "Importing environment variables..."
+
 CONFIG_PROVISION_PATH="/temp/config"
+PROFILE="/home/vagrant/.profile"
 
-if [ -e "$CONFIG_PROVISION_PATH/profile" ]; then
-    echo "Importing environment variables..."
+sed -i "s#. /home/vagrant/.environment_vars##" $PROFILE
+sed -i "/^$/d" $PROFILE
 
-    if [ ! -e "/home/vagrant/.profile.bkp" ]; then
-        cp -iv /home/vagrant/.profile /home/vagrant/.profile.bkp
-    else
-        cat /home/vagrant/.profile.bkp > /home/vagrant/.profile
-    fi
-
-    cat $CONFIG_PROVISION_PATH/profile
-    cat $CONFIG_PROVISION_PATH/profile >> /home/vagrant/.profile
-fi
+cat $CONFIG_PROVISION_PATH/environment_vars
+cp -vf $CONFIG_PROVISION_PATH/environment_vars /home/vagrant/.environment_vars
+echo ". /home/vagrant/.environment_vars" >> $PROFILE
