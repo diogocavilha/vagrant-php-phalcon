@@ -1,20 +1,23 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
+require 'yaml'
 
-# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+configuration = YAML.load_file('config.yaml')
+
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-    config.vm.box = "boxname"
-    config.vm.synced_folder "/www", "/www"
-    config.vm.synced_folder "./", "/temp"
-    config.vm.network :private_network, ip: "192.168.0.10"
-    # config.vm.network "forwarded_port", guest: 80, host: 8080
-    # config.vm.network "forwarded_port", guest: 8015, host: 8015
-    # config.vm.network "forwarded_port", guest: 8030, host: 8030
+    config.vm.box = configuration["box"]
+    config.vm.hostname = configuration["hostname"]
 
-    config.vm.provider "virtualbox" do |vb|
-        vb.customize ["modifyvm", :id, "--memory", "512"]
+    config.vm.synced_folder configuration["projects-folder"], "/www"
+    config.vm.synced_folder "./", "/temp"
+    config.vm.network :private_network, ip: configuration["ip"]
+    config.vm.network "forwarded_port", guest: 80, host: 8080
+
+    config.vm.provider configuration["provider"] do |vb|
+        vb.name = configuration["name"]
+        vb.memory = configuration["ram"]
+        vb.cpus = configuration["cpus"]
+        vb.gui = configuration["gui"]
     end
 
     config.vm.provision :shell, :path => "scripts/init.sh"

@@ -1,0 +1,10 @@
+---
+    ip: 192.168.0.10
+    box: boxname
+    name: phalcon2-dev
+    hostname: vm.local
+    provider: virtualbox
+    ram: 512
+    cpus: 1
+    gui: false
+    projects-folder: "/www"
