@@ -8,7 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.box = configuration["box"]
     config.vm.hostname = configuration["hostname"]
 
-    config.vm.synced_folder configuration["projects-folder"], "/www"
+    config.vm.synced_folder configuration["projects-folder"], "/www", create: true, group: "www-data", owner: "www-data", :mount_options => ["dmode=777","fmode=666"]
     config.vm.synced_folder "./", "/temp"
     config.vm.network :private_network, ip: configuration["ip"]
     config.vm.network "forwarded_port", guest: 80, host: 8080
