@@ -22,12 +22,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.provision :shell, :path => "scripts/init.sh"
     config.vm.provision :shell, :path => "scripts/system_packages.sh"
-    config.vm.provision :shell, :path => "scripts/frontend_packages.sh"
+    # config.vm.provision :shell, :path => "scripts/frontend_packages.sh"
     config.vm.provision :shell, :path => "scripts/git.sh"
     config.vm.provision :shell, :path => "scripts/nginx.sh"
     config.vm.provision :shell, :path => "scripts/php.sh"
-    config.vm.provision :shell, :path => "scripts/phalcon.sh"
-    config.vm.provision :shell, :path => "scripts/mysql.sh"
+    # config.vm.provision :shell, :path => "scripts/phalcon.sh"
+    # config.vm.provision :shell, :path => "scripts/mysql.sh"
     config.vm.provision :shell, :path => "scripts/envvars.sh"
     config.vm.provision :shell, :path => "scripts/postinstall.sh"
 end
