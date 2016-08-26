@@ -26,6 +26,7 @@ $ vagrant up
 - php7.0-mcrypt
 - php7.0-gd
 - php7.0-mysql
+- php7.0-sqlite3
 - php-redis
 - php-xdebug
 - php-xml
