@@ -18,6 +18,7 @@ apt-get install -y --force-yes php7.0-gd
 apt-get install -y --force-yes php7.0-mysql
 apt-get install -y --force-yes php-redis
 apt-get install -y --force-yes php-xdebug
+apt-get install -y --force-yes php-xml
 
 sudo phpenmod mcrypt
 
