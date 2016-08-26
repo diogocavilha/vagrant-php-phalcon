@@ -16,6 +16,7 @@ apt-get install -y --force-yes php7.0-intl
 apt-get install -y --force-yes php7.0-mcrypt
 apt-get install -y --force-yes php7.0-gd
 apt-get install -y --force-yes php7.0-mysql
+apt-get install -y --force-yes php7.0-sqlite3
 apt-get install -y --force-yes php-redis
 apt-get install -y --force-yes php-xdebug
 apt-get install -y --force-yes php-xml
