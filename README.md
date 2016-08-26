@@ -15,6 +15,7 @@ $ vagrant up
 - mcrypt
 - vim
 - zip
+- unzip
 
 ### PHP packages
 
@@ -27,3 +28,4 @@ $ vagrant up
 - php7.0-mysql
 - php-redis
 - php-xdebug
+- php-xml
