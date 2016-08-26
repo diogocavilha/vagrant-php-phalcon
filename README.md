@@ -1,8 +1,4 @@
-# Back-end
-## Nginx / PHP7.0 / Phalcon 3.0.1 / Composer / Git
-
-# Front-end
-## NodeJs / Npm / Bower / Gulp
+# Nginx / PHP7.0 / Phalcon 3.0.1 / Composer / Git / NodeJs / Npm / Bower / Gulp
 
 # Installation
 ```sh
