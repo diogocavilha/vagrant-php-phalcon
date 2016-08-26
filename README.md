@@ -1,3 +1,9 @@
+# Back-end
+## Nginx / PHP7.0 / Phalcon 3.0.1 / Composer / Git
+
+# Front-end
+## NodeJs / Npm / Bower / Gulp
+
 # Installation
 ```sh
 $ cd /path/project
@@ -6,7 +12,14 @@ $ cd vagrant
 $ vagrant up
 ```
 
-# PHP7.0 / Phalcon 3.0.1 / Composer
+### OS packages
+
+- curl
+- mcrypt
+- vim
+- zip
+
+### PHP packages
 
 - php7.0-cli
 - php7.0-fpm
